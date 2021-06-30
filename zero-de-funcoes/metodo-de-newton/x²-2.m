@@ -11,7 +11,7 @@ max_iter = 1000;
 for k = 1: max_iter
     x(k+1) = x(k) - f(x(k)) / df(x(k));
     
-    if abs(x(k+1) - x(k)) < tol && abs(f(x(k)))
+    if abs(x(k+1) - x(k)) < tol && abs(f(x(k))) < tol
       break
     endif
 endfor
