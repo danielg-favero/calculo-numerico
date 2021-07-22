@@ -55,7 +55,7 @@ for i = 1: n
     sum = sum + L(i, j) * y(j);
   endfor
   
-  y(i) = b(i) - sum;
+  y(i) = (b(i) - sum) / L(i, i);
 endfor
 
 % Resolvendo o sistema Ux = b
