@@ -17,6 +17,9 @@ for i = 1: n1
   b(i) = 1 / i;
 endfor
 
+disp("Matriz gerada 5x5")
+A
+
 for k = 1: n1 - 1
   for i = k + 1: n1
     m(i, k) = A(i, k) / A(k, k);
