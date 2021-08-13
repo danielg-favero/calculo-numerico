@@ -4,14 +4,14 @@ clear
 % INTEGRAÇÃO POR MÉTODO DE SIMPSON
 
 % Intervalo de integração
-a = 1;
-b = 2;
+a = 0;
+b = 0.6;
 
 % Função a ser integrada no intervalo
-f = @(x) e^x;
+f = @(x) 1 / (1 + x);
 
 max_it = 1000;
-tol = 0.00001;
+tol = 0.001;
 
 % Valor inicial da integral
 Isr = 0;
@@ -30,7 +30,7 @@ for m = 2: 2:max_it
   Isr = sum * h / 3;
   
   % Calculando o erro obtido ao calcular a integral
-  M4 = abs(e^b); % Valor máximo da quarta derivada de f(x) no intervalo [a, b]
+  M4 = abs(24 / ((1 + a)^5)); % Valor máximo da quarta derivada de f(x) no intervalo [a, b]
   Esr = ((b - a) * M4 * h^4) / 180; % Erro
   
   if abs(Esr) < tol
